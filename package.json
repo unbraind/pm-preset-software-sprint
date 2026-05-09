@@ -1,0 +1,17 @@
+{
+  "name": "pm-preset-software-sprint",
+  "version": "0.1.0",
+  "description": "Sprint-based software development pm workspace preset — default governance, sprint templates, team-level settings",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@unbrained/pm-cli": ">=2026.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
