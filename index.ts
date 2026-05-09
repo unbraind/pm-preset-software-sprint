@@ -1,4 +1,4 @@
-import { defineExtension } from "@unbrained/pm-cli/sdk";
+import { defineExtension, type CommandHandlerContext } from "@unbrained/pm-cli/sdk";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -100,31 +100,26 @@ function writeJsonFile(filePath: string, data: object, dryRun: boolean): void {
 // ─── Extension ───────────────────────────────────────────────────────────────
 
 export default defineExtension({
-  name: "pm-preset-software-sprint",
-
-  commands: [
-    {
+  activate(api) {
+    api.registerCommand({
       name: "sprint-setup",
       description:
         "Apply the software-sprint preset to the current pm workspace (settings + templates).",
-
       flags: [
         {
-          name: "force",
+          long: "force",
           short: "f",
           type: "boolean",
           description: "Overwrite existing settings.json and template files.",
-          default: false,
         },
         {
-          name: "dry-run",
+          long: "dry-run",
           short: "n",
           type: "boolean",
           description: "Preview what would be written without making changes.",
-          default: false,
         },
         {
-          name: "prefix",
+          long: "prefix",
           short: "p",
           type: "string",
           description:
@@ -132,11 +127,13 @@ export default defineExtension({
         },
       ],
 
-      async run({ flags, cwd }: { flags: Record<string, unknown>; cwd: string }) {
-        const force = flags["force"] as boolean;
-        const dryRun = flags["dry-run"] as boolean;
-        const prefixOverride = flags["prefix"] as string | undefined;
+      async run(context: CommandHandlerContext) {
+        const { options, pm_root } = context;
+        const force = Boolean(options["force"]);
+        const dryRun = Boolean(options["dry-run"]);
+        const prefixOverride = options["prefix"] as string | undefined;
 
+        const cwd = pm_root ?? process.cwd();
         const pmDir = path.join(cwd, ".agents", "pm");
         const settingsPath = path.join(pmDir, "settings.json");
         const templatesDir = path.join(pmDir, "templates");
@@ -222,6 +219,6 @@ Re-run without --dry-run to apply.
 `);
         }
       },
-    },
-  ],
+    });
+  },
 });

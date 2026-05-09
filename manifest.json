@@ -1,9 +1,11 @@
 {
   "name": "pm-preset-software-sprint",
   "version": "0.1.0",
-  "description": "Sprint-based software development pm workspace preset — default governance, sprint templates, team-level settings",
+  "description": "Sprint-based software development pm workspace preset \u2014 default governance, sprint templates, team-level settings",
   "author": "@unbraind",
-  "entry": "index.js",
+  "entry": "./dist/index.js",
   "priority": 50,
-  "capabilities": ["commands"]
+  "capabilities": [
+    "commands"
+  ]
 }
