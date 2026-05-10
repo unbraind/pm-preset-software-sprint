@@ -6,6 +6,7 @@
   "entry": "./dist/index.js",
   "priority": 50,
   "capabilities": [
-    "commands"
+    "commands",
+    "schema"
   ]
 }
