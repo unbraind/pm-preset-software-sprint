@@ -2,6 +2,14 @@
   "name": "pm-preset-software-sprint",
   "version": "0.1.0",
   "description": "Sprint-based software development pm workspace preset — default governance, sprint templates, team-level settings",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unbraind/pm-preset-software-sprint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unbraind/pm-preset-software-sprint/issues"
+  },
+  "homepage": "https://github.com/unbraind/pm-preset-software-sprint#readme",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
