@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.1.0 - 2026-05-26
+## 2026.05.26 - 2026-05-26
+
+### Fixed
+
+- ci: fix release workflow step ordering ([pm-preset-software-sprint-qmet](https://github.com/unbraind/pm-preset-software-sprint/blob/main/.agents/pm/tasks/pm-preset-software-sprint-qmet.toon))
 
 ### Other
 
