@@ -1,12 +1,16 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Add publish retry + provenance fallback to release workflow ([pm-preset-software-sprint-1r3c](https://github.com/unbraind/pm-preset-software-sprint/blob/main/.agents/pm/tasks/pm-preset-software-sprint-1r3c.toon))
+
 ## 2026.05.27 - 2026-05-27
 
 ### Added
 
 - Add bun-install verification to release workflow ([pm-preset-software-sprint-5e5t](https://github.com/unbraind/pm-preset-software-sprint/blob/main/.agents/pm/tasks/pm-preset-software-sprint-5e5t.toon))
-
-## 2026.05.26 - 2026-05-26
 
 ### Fixed
 
