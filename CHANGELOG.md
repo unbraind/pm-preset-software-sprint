@@ -12,6 +12,8 @@
 
 - Add bun-install verification to release workflow ([pm-preset-software-sprint-5e5t](https://github.com/unbraind/pm-preset-software-sprint/blob/main/.agents/pm/tasks/pm-preset-software-sprint-5e5t.toon))
 
+## 2026.05.26 - 2026-05-26
+
 ### Fixed
 
 - ci: fix release workflow step ordering ([pm-preset-software-sprint-qmet](https://github.com/unbraind/pm-preset-software-sprint/blob/main/.agents/pm/tasks/pm-preset-software-sprint-qmet.toon))
