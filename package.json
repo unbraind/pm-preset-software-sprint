@@ -1,6 +1,6 @@
 {
   "name": "pm-preset-software-sprint",
-  "version": "2026.5.28",
+  "version": "2026.5.29",
   "description": "Sprint-based software development pm workspace preset — default governance, sprint templates, team-level settings",
   "repository": {
     "type": "git",
